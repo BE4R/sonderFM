@@ -15,7 +15,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script src="http://connect.soundcloud.com/sdk.js"></script>
 
-  <title>Sonder FM</title>
+  <title>sonder</title>
 
 </head>
 
@@ -23,25 +23,24 @@
 
   <div class="container">
 
+
     <md-toolbar id="title" md-scroll-shrink ng-if="true">
-      <div class="md-toolbar-tools">
+      <div class="md-toolbar-tools" class="header-color">
         <h3>
-        <span>S O N D E R</span>
+        <span>S O N D E R F M</span>
       </h3>
       </div>
     </md-toolbar>
 
     <md-input-container md-no-float class="md-block">
       <form ng-submit="searchUser()">
-        <label>Username</label>
-        <input ng-model="formData.username">
+        <input ng-model="formData.username" placeholder="Search SoundCloud Username...">
       </form>
     </md-input-container>
 
     <div id="player">
       <div ng-bind-html="player_html" flex="100"></div>
     </div>
-
 
     <div layout="row">
       <div flex="25">

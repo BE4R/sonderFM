@@ -8,8 +8,43 @@ body {
   margin-bottom: 25px;
 }
 
+.md-toolbar-tools {
+  background-color: #607D8B;
+  color: white;
+  border-left-style: solid;
+  border-bottom-style: solid;
+  border-color: black;
+}
+
+md-input-container.md-default-theme label,
+md-input-container.md-default-theme .md-placeholder {
+  background-color: rgba(0, 0, 0, 0);
+  color: black !important;
+}
+
+md-input-container:not(.md-input-invalid).md-input-focused .md-input {
+  border-color: black;
+}
+
+.banner {
+  background-color: black;
+  background-image: url(img/yubin.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 150px 30px;
+  height: 150px;
+  max-width: 100%;
+  margin-bottom: 20px;
+  margin-top: -20px;
+  text-align: center;
+}
+
 #player {
-  background-color: gray;
+  background-image: url(img/yubin.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  background-color: rgba(0, 0, 0, 0.2);
   height: 105px;
   max-width: 100%;
   margin-bottom: 20px;

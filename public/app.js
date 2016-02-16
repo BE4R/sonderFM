@@ -18,11 +18,6 @@ app.config(function ($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise('/');
 });
 
-//UI Controls for collapse
-app.controller('uiCtrl', function ($scope) {
-
-});
-
 app.controller('mainCtrl', function ($scope, soundcloud, $sce) {
 
   $scope.userId = '';

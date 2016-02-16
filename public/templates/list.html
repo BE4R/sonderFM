@@ -6,7 +6,7 @@
   </div>
 </md-toolbar>
 
-<div flex="50" ng-repeat="profile in profiles | orderBy: 'username'">
+<div flex="50" id="followings" ng-repeat="profile in profiles | orderBy: 'username'">
 
   <md-button class="md-raised" ng-click="userFavorites(profile.id)">
     <h5>

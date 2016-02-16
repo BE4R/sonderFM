@@ -6,7 +6,7 @@
   </div>
 </md-toolbar>
 
-<div flex="50" ng-repeat="like in favorites">
+<div flex="50" id="tracks" ng-repeat="like in favorites">
   <div>{{errorMsg}}</div>
   <md-button class="md-raised">
     <span ng-click="playTrack(like.permalink_url)">{{like.title}}</span>

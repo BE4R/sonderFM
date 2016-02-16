@@ -55,6 +55,7 @@ app.service('soundcloud', function ($q) {
           angular.copy(data, self.favorites);
           d.resolve(data);
         } else {
+          angular.copy('No favorite Tracks', self.errorMsg);
           d.reject('This user has no favorite tracks.');
         }
       });

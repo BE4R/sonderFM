@@ -1,0 +1,20 @@
+{
+  "name": "visualizr",
+  "version": "1.0.0",
+  "description": "soundcloud API with html5 background",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "~1.5.2",
+    "express": "~4.7.2",
+    "method-override": "~2.1.2",
+    "mongoose": "~4.1.0",
+    "morgan": "~1.2.2",
+    "node-soundcloud": "0.0.5"
+  },
+  "author": "",
+  "license": "ISC"
+}

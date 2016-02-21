@@ -1,6 +1,6 @@
-app.service('soundcloud', function ($q) {
+app.service('soundcloud', function ($q, $http) {
 
-  var client_id = "e2df2ed06af9f855896950f3ff6dacfd"
+  var client_id = "efcb1cb27a2c29ffc600b85cf11e81c0"
 
   SC.initialize({
     client_id: client_id
@@ -27,6 +27,7 @@ app.service('soundcloud', function ($q) {
     'getId': function (username) {
       var d = $q.defer();
       SC.get('/resolve?url=http://soundcloud.com/' + username, function (data) {
+        console.log(data);
         if (!data.errors) {
           angular.copy(data.id, self.id);
           d.resolve(data.id);

@@ -8,6 +8,10 @@ body {
   margin-bottom: 25px;
 }
 
+.container {
+  margin-bottom: 350px;
+}
+
 .md-toolbar-tools {
   background-color: #607D8B;
   color: white;

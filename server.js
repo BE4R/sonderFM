@@ -4,7 +4,8 @@ var port = process.env.PORT || 3000;
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
 var app = express();
-var SC = require('node-soundcloud');
+var SC = require('soundcloud-node');
+var request = require('request');
 
 //logging and parsing
 app.use(express.static(__dirname + '/public'));
@@ -17,6 +18,9 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({
   type: 'application/vnd.api+json'
 }));
+
+//ROUTES
+require('./app/routes.js')(app)
 
 //LISTEN
 app.listen(port);

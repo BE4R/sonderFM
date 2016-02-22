@@ -1,11 +1,5 @@
 app.service('soundcloud', function ($q, $http) {
 
-  var client_id = "efcb1cb27a2c29ffc600b85cf11e81c0"
-
-  SC.initialize({
-    client_id: client_id
-  });
-
   var self = {
     'id': '',
     'username': '',
@@ -14,52 +8,42 @@ app.service('soundcloud', function ($q, $http) {
     'favorites': [],
     'getUser': function (id) {
       var d = $q.defer();
-      SC.get('/users/' + id, function (data) {
-        if (!data.errors) {
-          angular.copy(data.username, self.username);
-          d.resolve(data.username);
-        } else {
-          d.reject('cant find user');
-        }
-      });
+      $http.get('/username/' + id).success(function (data) {
+        d.resolve(data.username);
+      }).error(function (error) {
+        d.resolve(error);
+      })
       return d.promise;
     },
     'getId': function (username) {
       var d = $q.defer();
-      SC.get('/resolve?url=http://soundcloud.com/' + username, function (data) {
-        console.log(data);
-        if (!data.errors) {
-          angular.copy(data.id, self.id);
-          d.resolve(data.id);
+      $http.get('/id/' + username).success(function (data) {
+        if (data.error) {
+          d.reject("Cannot find specified username.");
         } else {
-          d.reject('cant find user');
+          console.log(data.id);
+          d.resolve(data.id);
         }
-      });
+      })
       return d.promise;
     },
     'getFollowing': function (id) {
       var d = $q.defer();
-      SC.get('/users/' + id + '/followings', function (data) {
-        if (data.collection.length > 0) {
-          angular.copy(data.collection, self.followings);
-          d.resolve(data.collection);
-        } else {
-          d.reject('Nothing found for this user.');
-        }
-      });
+      $http.get('/following/' + id).success(function (data) {
+        console.log(data.collection);
+        d.resolve(data.collection);
+      }).error(function (error) {
+        d.reject("Somethings wrong");
+      })
       return d.promise;
     },
     'getFavorites': function (id) {
       var d = $q.defer();
-      SC.get('/users/' + id + '/favorites', function (data) {
-        if (data.length > 0) {
-          angular.copy(data, self.favorites);
-          d.resolve(data);
-        } else {
-          angular.copy('No favorite Tracks', self.errorMsg);
-          d.reject('This user has no favorite tracks.');
-        }
-      });
+      $http.get('/favorites/' + id).success(function (data) {
+        d.resolve(data);
+      }).error(function (error) {
+        d.reject(error);
+      })
       return d.promise;
     }
   }

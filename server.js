@@ -4,8 +4,6 @@ var port = process.env.PORT || 3000;
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
 var app = express();
-var SC = require('soundcloud-node');
-var request = require('request');
 
 //logging and parsing
 app.use(express.static(__dirname + '/public'));

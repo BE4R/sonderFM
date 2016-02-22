@@ -1,5 +1,5 @@
 {
-  "name": "visualizr",
+  "name": "sonderfm",
   "version": "1.0.0",
   "description": "soundcloud API with html5 background",
   "main": "server.js",
@@ -11,9 +11,9 @@
     "body-parser": "~1.5.2",
     "express": "~4.7.2",
     "method-override": "~2.1.2",
-    "mongoose": "~4.1.0",
     "morgan": "~1.2.2",
-    "node-soundcloud": "0.0.5"
+    "node-soundcloud": "0.0.5",
+    "request": "2.69.0"
   },
   "author": "",
   "license": "ISC"

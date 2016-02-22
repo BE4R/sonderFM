@@ -7,36 +7,8 @@
 </md-toolbar>
 
 <div flex="50" id="tracks" ng-repeat="like in favorites">
-  <div>{{errorMsg}}</div>
   <md-button class="md-raised">
     <span ng-click="playTrack(like.permalink_url)">{{like.title}}</span>
     <md-divider ng-if="!$last"></md-divider>
   </md-button>
 </div>
-
-<!--
-<md-content>
-  <md-list>
-    <md-list-item class="md-3-line" ng-repeat="like in favorites">
-      <div class="md-list-item-text">
-        <h6 ng-show="errorMsg"> No liked tracks</h6>
-        <h6>{{like.title}}</h6>
-        <md-divider ng-if="!$last"></md-divider>
-      </div>
-    </md-list-item>
-  </md-list>
-</md-content>
-
-
-
-
-
-
-<div flex="50" ng-repeat="profile in profiles | orderBy: 'username'">
-  <md-button class="md-raised" ng-click="userFavorites(profile.id)">
-    <h5>
-          <span>{{profile.username}} // {{profile.id}}</span>
-    </h5>
-    <md-divider ng-if="!$last"></md-divider>
-  </md-button>
-</div>-->

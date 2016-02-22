@@ -44,7 +44,7 @@ app.controller('mainCtrl', function ($scope, soundcloud, $sce) {
               })
         },
         function (err) {
-          $scope.userId = err;
+          $scope.errorMsg = err;
         })
   };
 

@@ -1,33 +1,13 @@
-body {
-  padding: 25px;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 400;
+html {
+  font-family: Roboto, sans-serif;
 }
 
-#title {
-  margin-bottom: 25px;
+body {
+  padding: 25px;
 }
 
 .container {
   margin-bottom: 350px;
-}
-
-.md-toolbar-tools {
-  background-color: #607D8B;
-  color: white;
-  border-left-style: solid;
-  border-bottom-style: solid;
-  border-color: black;
-}
-
-md-input-container.md-default-theme label,
-md-input-container.md-default-theme .md-placeholder {
-  background-color: rgba(0, 0, 0, 0);
-  color: black !important;
-}
-
-md-input-container:not(.md-input-invalid).md-input-focused .md-input {
-  border-color: black;
 }
 
 .banner {
@@ -54,11 +34,4 @@ md-input-container:not(.md-input-invalid).md-input-focused .md-input {
   margin-bottom: 20px;
   margin-top: -20px;
   text-align: center;
-}
-
-#tracks,
-#followings {
-  border-left-style: solid;
-  border-color: gray;
-  border-width: 2px;
 }

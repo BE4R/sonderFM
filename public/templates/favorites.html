@@ -1,14 +1,7 @@
-<md-toolbar id="title" md-scroll-shrink ng-if="true">
-  <div class="md-toolbar-tools">
-    <h3>
-      <span>{{username==''? "Username" : username}}</span>
-    </h3>
-  </div>
-</md-toolbar>
+<div class="card-panel" id="title">
+  <span>{{username==''? "Username" : username}}</span>
+</div>
 
-<div flex="50" id="tracks" ng-repeat="like in favorites">
-  <md-button class="md-raised">
-    <span ng-click="playTrack(like.permalink_url)">{{like.title}}</span>
-    <md-divider ng-if="!$last"></md-divider>
-  </md-button>
+<div class="collection">
+  <a href="#!" class="collection-item" ng-repeat="like in favorites" ng-click="playTrack(like.permalink_url); selectSong($index)" ng-class="{active: $index==selectedSong}">{{like.title}}</a>
 </div>

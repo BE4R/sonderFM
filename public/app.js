@@ -1,4 +1,4 @@
-var app = angular.module('sonder', ['ngMaterial', 'ngAnimate', 'ui.bootstrap', 'ui.router']);
+var app = angular.module('sonder', ['ngAnimate', 'ui.bootstrap', 'ui.router']);
 
 app.config(function ($stateProvider, $urlRouterProvider) {
   $stateProvider
@@ -26,6 +26,16 @@ app.controller('mainCtrl', function ($scope, soundcloud, $sce) {
   $scope.isLoading = soundcloud.isLoading;
   $scope.errorMsg = soundcloud.errorMsg;
   $scope.favorites = soundcloud.favorites;
+
+  $scope.selectedFollowingUser;
+  $scope.selectFollowingUser = function (index) {
+    $scope.selectedFollowingUser = index;
+  }
+
+  $scope.selectedSong;
+  $scope.selectSong = function (index) {
+    $scope.selectedSong = index;
+  }
 
   $scope.searchUser = function () {
     $scope.userId = '';
@@ -71,7 +81,7 @@ app.controller('mainCtrl', function ($scope, soundcloud, $sce) {
     console.log(url);
     SC.oEmbed(url, {
       auto_play: true,
-      maxwidth: 940,
+      maxwidth: 750,
       maxheight: 105
     }, function (data) {
       console.log(data);

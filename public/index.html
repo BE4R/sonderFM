@@ -3,7 +3,7 @@
 <html ng-app="sonder">
 
 <head>
-
+  <meta charset="utf-8">
   <!-- stylesheets -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css" media="screen,projection">
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>sonder</title>
-
+  <base href="/">
 </head>
 
 <body ng-controller="mainCtrl">
@@ -33,7 +33,7 @@
       </div>
     </div>
 
-    <form ng-submit="searchUser()" handle-phone-submit>
+    <form ng-submit="searchUser()">
       <div class="row">
         <div class="col s12 m8 l10 input-field">
           <p class="error-msg" ng-if="errorMsg">{{errorMsg}}</p>
@@ -64,9 +64,6 @@
   <!-- Materialize css -->
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
-
-  <!-- jQuery -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.2/angular.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.2/angular-animate.min.js"></script>

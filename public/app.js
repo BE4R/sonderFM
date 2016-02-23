@@ -1,6 +1,6 @@
 var app = angular.module('sonder', ['ngAnimate', 'ui.bootstrap', 'ui.router']);
 
-app.config(function ($stateProvider, $urlRouterProvider) {
+app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
   $stateProvider
     .state('/home', {
       url: "/",
@@ -16,17 +16,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
     })
 
   $urlRouterProvider.otherwise('/');
-});
-
-app.directive('handlePhoneSubmit', function () {
-  return function (scope, element, attr) {
-    var textFields = $(element).children('input[type=text]');
-
-    $(element).submit(function () {
-      console.log('form was submitted');
-      textFields.blur();
-    });
-  };
+  $locationProvider.html5Mode(true);
 });
 
 app.controller('mainCtrl', function ($scope, soundcloud, $sce) {

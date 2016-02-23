@@ -36,8 +36,8 @@
     <form ng-submit="searchUser()">
       <div class="row valign-wrapper">
         <div class="input-field col m10 s12 valign">
+          <p class="error-msg" ng-if="errorMsg">{{errorMsg}}</p>
           <input id="username" type="text" ng-model="formData.username" placeholder="Search SoundCloud Username...">
-          <label for="username" ng-if="errorMsg" data-error="{{errorMsg}}"></label>
         </div>
         <div class="col m2 s12 valign right-align">
           <button class="btn waves-effect waves-light center-align" type="submit" name="action">Submit

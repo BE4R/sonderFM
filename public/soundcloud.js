@@ -30,7 +30,6 @@ app.service('soundcloud', function ($q, $http) {
     'getFollowing': function (id) {
       var d = $q.defer();
       $http.get('/following/' + id).success(function (data) {
-        console.log(data.collection);
         d.resolve(data.collection);
       }).error(function (error) {
         d.reject("Somethings wrong");

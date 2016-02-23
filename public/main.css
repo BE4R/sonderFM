@@ -21,25 +21,17 @@ body {
   background-position: center center;
 }
 
-.banner {
-  background-color: black;
-  background-image: url(img/yubin.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 150px 30px;
-  height: 150px;
-  max-width: 100%;
-  margin-bottom: 20px;
-  margin-top: -20px;
-  text-align: center;
-}
-
 .tile {
   color: white;
   background-color: #212121;
   max-height: 45px;
   font-size: 22px;
   font-weight: 100;
+}
+
+.error-msg {
+  font-size: 12px;
+  color: #f44336;
 }
 
 .btn {

@@ -5,3 +5,7 @@
 <div class="collection">
   <a href="#!" class="collection-item" ng-repeat="like in favorites" ng-click="playTrack(like.permalink_url); selectSong($index)" ng-class="{active: $index==selectedSong}">{{like.title}}</a>
 </div>
+
+<div>
+  {{favoritesErrMsg}}
+</div>

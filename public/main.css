@@ -1,54 +1,64 @@
-body {
-  padding: 25px;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 400;
+html {
+  font-family: 'Roboto', sans-serif;
+  /*  font-weight: 100;*/
 }
 
-#title {
-  margin-bottom: 25px;
+body {
+  padding: 25px;
 }
 
 .container {
   margin-bottom: 350px;
 }
 
-.md-toolbar-tools {
-  background-color: #607D8B;
+#title {
   color: white;
-  border-left-style: solid;
-  border-bottom-style: solid;
-  border-color: black;
-}
-
-md-input-container.md-default-theme label,
-md-input-container.md-default-theme .md-placeholder {
-  background-color: rgba(0, 0, 0, 0);
-  color: black !important;
-}
-
-md-input-container:not(.md-input-invalid).md-input-focused .md-input {
-  border-color: black;
-}
-
-.banner {
-  background-color: black;
-  background-image: url(img/yubin.jpg);
+  background-image: url(../img/asap.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 150px 30px;
-  height: 150px;
-  max-width: 100%;
-  margin-bottom: 20px;
-  margin-top: -20px;
-  text-align: center;
+  font-size: 32px;
+  font-weight: 100;
+  background-position: center center;
+}
+
+.tile {
+  color: white;
+  background-color: #212121;
+  max-height: 45px;
+  font-size: 22px;
+  font-weight: 100;
+}
+
+.error-msg {
+  font-size: 12px;
+  color: #f44336;
+}
+
+.btn {
+  background-color: #212121;
+  font-weight: 100;
+}
+
+.collection .collection-item.active {
+  background-color: #212121;
+  color: white;
+}
+
+.collection a.collection-item {
+  color: black;
+}
+
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid #ff6f00;
+  box-shadow: 0 1px 0 0 #ff6f00;
 }
 
 #player {
-  background-image: url(img/yubin.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top;
-  background-color: rgba(0, 0, 0, 0.2);
+  background: linear-gradient(43deg, #ff8f00, #ffc107, #ff8a65, #ef9a9a, #ec407a);
+  background-size: 600% 600%;
+  -webkit-animation: playerBackground 23s ease infinite;
+  -moz-animation: playerBackground 23s ease infinite;
+  animation: playerBackground 23s ease infinite;
   height: 105px;
   max-width: 100%;
   margin-bottom: 20px;
@@ -56,9 +66,38 @@ md-input-container:not(.md-input-invalid).md-input-focused .md-input {
   text-align: center;
 }
 
-#tracks,
-#followings {
-  border-left-style: solid;
-  border-color: gray;
-  border-width: 2px;
+@-webkit-keyframes playerBackground {
+  0% {
+    background-position: 99% 0%
+  }
+  50% {
+    background-position: 2% 100%
+  }
+  100% {
+    background-position: 99% 0%
+  }
+}
+
+@-moz-keyframes playerBackground {
+  0% {
+    background-position: 99% 0%
+  }
+  50% {
+    background-position: 2% 100%
+  }
+  100% {
+    background-position: 99% 0%
+  }
+}
+
+@keyframes playerBackground {
+  0% {
+    background-position: 99% 0%
+  }
+  50% {
+    background-position: 2% 100%
+  }
+  100% {
+    background-position: 99% 0%
+  }
 }

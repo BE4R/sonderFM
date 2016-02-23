@@ -18,6 +18,17 @@ app.config(function ($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise('/');
 });
 
+app.directive('handlePhoneSubmit', function () {
+  return function (scope, element, attr) {
+    var textFields = $(element).children('input[type=text]');
+
+    $(element).submit(function () {
+      console.log('form was submitted');
+      textFields.blur();
+    });
+  };
+});
+
 app.controller('mainCtrl', function ($scope, soundcloud, $sce) {
 
   $scope.userId = '';

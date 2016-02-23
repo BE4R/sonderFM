@@ -25,19 +25,21 @@
 
   <div class="container">
 
-
     <div class='card-panel' id="title">
-      <h4>
-        S O N D E R F M
-      </h4>
+      <div>
+        <p class="center-align">
+          S O N D E R F M
+        </p>
+      </div>
     </div>
 
     <form ng-submit="searchUser()">
       <div class="row valign-wrapper">
         <div class="input-field col m10 s12 valign">
-          <input ng-model="formData.username" placeholder="Search SoundCloud Username...">
+          <input id="username" type="text" ng-model="formData.username" placeholder="Search SoundCloud Username...">
+          <label for="username" ng-if="errorMsg" data-error="{{errorMsg}}"></label>
         </div>
-        <div class="col m2 s12 valign">
+        <div class="col m2 s12 valign right-align">
           <button class="btn waves-effect waves-light center-align" type="submit" name="action">Submit
           </button>
         </div>
@@ -45,7 +47,7 @@
     </form>
 
     <div class="col s12" id="player">
-      <div ng-bind-html="player_html" flex="100"></div>
+      <div ng-bind-html="player_html"></div>
     </div>
 
     <div class="row">

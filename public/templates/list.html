@@ -3,5 +3,5 @@
 </div>
 
 <div class="collection">
-  <a class="collection-item" ng-repeat="profile in profiles | orderBy: 'username'" ng-click="userFavorites(profile.id); selectFollowingUser($index)" ng-class="{active: $index==selectedFollowingUser}">{{profile.username}}</a>
+  <a href="#favorites" class="collection-item" ng-repeat="profile in profiles | orderBy: 'username'" ng-click="userFavorites(profile.id); selectFollowingUser($index)" ng-class="{active: $index==selectedFollowingUser}">{{profile.username}}</a>
 </div>

@@ -11,6 +11,9 @@ app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
         },
         "favorites": {
           templateUrl: 'templates/favorites.html'
+        },
+        "footer": {
+          templateUrl: 'templates/footer.html'
         }
       }
     })
@@ -85,7 +88,7 @@ app.controller('mainCtrl', function ($scope, soundcloud, $sce) {
   $scope.playTrack = function (url) {
     SC.oEmbed(url, {
       auto_play: true,
-      maxwidth: 279,
+      maxwidth: 360,
       maxheight: 105
     }, function (data) {
       console.log(data);

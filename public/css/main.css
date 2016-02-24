@@ -8,7 +8,7 @@ body {
 }
 
 .container {
-  margin-bottom: 350px;
+  margin-bottom: 50px;
 }
 
 #title {
@@ -19,6 +19,12 @@ body {
   font-size: 32px;
   font-weight: 100;
   background-position: center center;
+}
+
+#footer {
+  background-image: url(../img/yeezy.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .tile {
@@ -53,7 +59,7 @@ body {
   box-shadow: 0 1px 0 0 #ff6f00;
 }
 
-#player {
+#banner {
   background: linear-gradient(43deg, #ff8f00, #ffc107, #ff8a65, #ef9a9a, #ec407a);
   background-size: 600% 600%;
   -webkit-animation: playerBackground 23s ease infinite;
@@ -64,6 +70,12 @@ body {
   margin-bottom: 20px;
   /*  margin-top: -20px;*/
   text-align: center;
+}
+
+#player {
+  height: 105px;
+  max-width: 100%;
+  margin-left: -40.5px;
 }
 
 @-webkit-keyframes playerBackground {

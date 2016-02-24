@@ -1,8 +1,8 @@
-<div class="tile">
+<div id="favorites" class="tile">
   <div style="padding-left: 10px;"> {{username==''? "USERNAME" : username}} </div>
 </div>
 
-<div id="favorites" class="collection scrollspy">
+<div class="collection scrollspy">
   <a href="#title" class="collection-item" ng-repeat="like in favorites" ng-click="playTrack(like.permalink_url); selectSong($index)" ng-class="{active: $index==selectedSong}">{{like.title}}</a>
 </div>
 

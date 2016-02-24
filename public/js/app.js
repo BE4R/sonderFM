@@ -89,7 +89,7 @@ app.controller('mainCtrl', function ($scope, soundcloud, $sce) {
     SC.oEmbed(url, {
       auto_play: true,
       maxwidth: 455,
-      maxheight: 105
+      maxheight: 150
     }, function (data) {
       console.log(data);
       $scope.$apply($scope.player_html = $sce.trustAsHtml(data.html));
